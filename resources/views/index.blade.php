@@ -57,7 +57,7 @@
 
       
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="{{url('/')}}" class="logo mr-auto"><img src="{{ asset('images/ns-text.png') }}" alt="" ></a>
+      <a href="{{url('/')}}" class="logo mr-auto"><img src="{{ asset('images/logo NS.png') }}" alt="" width="100%"></a>
 	  
 
       <nav class="main-nav d-none d-lg-block">
