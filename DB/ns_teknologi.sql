@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `about` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ns_teknologi.about: ~3 rows (approximately)
 /*!40000 ALTER TABLE `about` DISABLE KEYS */;
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ns_teknologi.client: ~3 rows (approximately)
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
@@ -134,6 +134,32 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 -- Dumping data for table ns_teknologi.password_resets: ~0 rows (approximately)
 /*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
+
+-- Dumping structure for table ns_teknologi.product
+CREATE TABLE IF NOT EXISTS `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` text,
+  `judul` varchar(100) DEFAULT NULL,
+  `keterangan` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table ns_teknologi.product: ~0 rows (approximately)
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` (`id`, `image`, `judul`, `keterangan`, `created_at`, `updated_at`) VALUES
+	(15, 'toa.jpg', 'TOA', 'Sound System T.O.A', '2020-07-15 13:14:55', '2020-07-15 13:15:15'),
+	(16, 'allied-telesis.png', 'Telesis', 'Allied Telesis', '2020-07-15 13:15:52', '2020-07-15 13:15:52'),
+	(17, 'briker box.png', 'Box', 'Briker BOX', '2020-07-15 13:16:16', '2020-07-15 13:16:16'),
+	(18, 'aruba networks.png', 'Aruba', 'Aruba Network', '2020-07-15 13:16:47', '2020-07-15 13:16:47'),
+	(19, 'belden-4-logo.png', 'BELDEN', 'Belden Product', '2020-07-15 13:17:21', '2020-07-15 13:17:21'),
+	(20, 'calix.png', 'Calix', 'Calix Product', '2020-07-15 13:17:45', '2020-07-15 13:17:45'),
+	(21, 'Dasan Networks.png', 'Dasan', 'Dasan Network', '2020-07-15 13:18:16', '2020-07-15 13:18:16'),
+	(22, 'engenius.png', 'EnGesius', 'EnGesius Product', '2020-07-15 13:19:04', '2020-07-15 13:19:04'),
+	(23, 'netup.png', 'NetUP', 'NetUP System', '2020-07-15 13:19:37', '2020-07-15 13:19:37'),
+	(24, 'supreme.png', 'SUPREME', 'SUPREME Product', '2020-07-15 13:20:14', '2020-07-15 13:20:14');
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 -- Dumping structure for table ns_teknologi.users
 CREATE TABLE IF NOT EXISTS `users` (

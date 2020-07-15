@@ -28,6 +28,13 @@ Route::get('/about/edit/{id}', 'AboutController@edit');
 Route::put('/about/update/{id}', 'AboutController@update');
 Route::get('/about/hapus/{id}', 'AboutController@delete');
 
+Route::get('/product', 'ProductController@index')->name('product');
+Route::get('/product/tambah', 'ProductController@tambah')->name('product.tambah');
+Route::post('/product/store', 'ProductController@store');
+Route::get('/product/edit/{id}', 'ProductController@edit');
+Route::put('/product/update/{id}', 'ProductController@update');
+Route::get('/product/hapus/{id}', 'ProductController@delete');
+
 Route::get('/client', 'ClientController@index')->name('client');
 Route::get('/client/tambah', 'ClientController@tambah')->name('client.tambah');
 Route::post('/client/store', 'ClientController@store');

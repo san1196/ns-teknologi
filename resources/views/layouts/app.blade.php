@@ -59,6 +59,9 @@
                                 <a class="nav-link" href="{{ route('about') }}">{{ __('About Us') }}</a>
                             </li>
 							<li class="nav-item">
+                                <a class="nav-link" href="{{ route('product') }}">{{ __('System Product') }}</a>
+                            </li>
+							<li class="nav-item">
                                 <a class="nav-link" href="{{ route('brand') }}">{{ __('Product Brand') }}</a>
                             </li>
 							<li class="nav-item">
