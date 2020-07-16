@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 
 class Contact extends Controller
 {
-    function sendMail(Request $request){
+    public function sendMail(Request $request){
         
         $subject = $request->input('subject');
         $name = $request->input('name');
@@ -53,13 +53,13 @@ class Contact extends Controller
 
             $mail->send();
 
+            // $request->session()->flash('status', 'Terima kasih, kami sudah menerima email anda.');
+            // return redirect('/index');
+
         } catch (Exception $e) {
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         }
-
-        $request->session()->flash('status', 'Terima kasih, kami sudah menerima email anda.');
-        return redirect('/');
 
     }
 }
