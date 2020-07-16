@@ -358,9 +358,14 @@
             <div class="form">
 
               <h4 style="color: #8B0000;">Send us a message</h4>
-              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
 
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              @if(Session::has('status'))
+                <div class="alert alert-success">{{ Session::get('status') }}</div>
+              @endif
+              <!-- <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p> -->
+
+              <form action="/sendmail" method="post" role="form" class="php-email-form">
+              {{ csrf_field() }}
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
@@ -378,11 +383,11 @@
                   <div class="validate"></div>
                 </div>
 
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
+                </div> -->
 
                 <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
               </form>

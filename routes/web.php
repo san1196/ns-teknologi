@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/sendmail', 'Contact@sendMail');
+
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/about/tambah', 'AboutController@tambah')->name('about.tambah');
 Route::post('/about/store', 'AboutController@store');
