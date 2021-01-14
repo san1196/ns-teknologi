@@ -309,7 +309,7 @@
 
   <!-- ======= Footer ======= -->
 
-  @php
+	@php
 		$contact = DB::table('contact')->first();
 	@endphp
   <section id="footer" class="section-bg">
@@ -321,7 +321,7 @@
           <div class="col-lg-6">
 
             <div class="row">
-
+			@if(!empty($contact))
 			  <div class="col-sm-12">
 				<div class="footer-links">
 					<h4 style="color: #8B0000;">Our Location</h4>
@@ -334,9 +334,11 @@
                 <div class="footer-links">
                   <h4 style="color: #8B0000;">Contact Us</h4>
                   <p>
+					
                     <i class="fa fa-location-arrow"></i> {{$contact->alamat}}<br>
                     <i class="fa fa-phone"></i> {{$contact->telepon}}<br>
                     <i class="fa fa-envelope"></i> {{$contact->email}}<br>
+					
                   </p>
                 </div>
 
@@ -348,6 +350,7 @@
                 </div>
 
               </div>
+			@endif
 
             </div>
 
