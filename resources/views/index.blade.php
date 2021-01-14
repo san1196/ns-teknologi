@@ -57,7 +57,7 @@
 
       
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="{{url('/')}}" class="logo mr-auto"><img src="{{ asset('images/logo NS.png') }}" alt="" width="100%"></a>
+      <a href="{{url('/')}}" class="logo mr-auto"><img src="{{ asset('images/logo NS.png') }}" alt="" ></a>
 	  
 
       <nav class="main-nav d-none d-lg-block">
@@ -403,7 +403,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>SANDEV ID</strong>. All Rights Reserved
+        &copy; Copyright <strong>NSTECH</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
