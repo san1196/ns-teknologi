@@ -7,7 +7,7 @@ use App\About;
 
 class ApiController extends Controller
 {
-    public function get_all_karyawan()
+    public function get_all_about()
     {
         return response()->json(About::all(), 200);
     }
