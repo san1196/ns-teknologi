@@ -7,9 +7,10 @@ use App\About;
 
 class ApiController extends Controller
 {
-    public function get_all_about()
+    public function get_all_about(Request $request)
     {
-        return response()->json(About::all(), 200);
+        $filter = $request->filter;
+        return response()->json(About::where('keterangan','like','%'.$filter.'%')->paginate(10), 200);
     }
 }
 
