@@ -25,19 +25,11 @@ class AboutController extends Controller
      */
     public function index(Request $request)
     {
-		// $filter = $request->filter;
+		$filter = $request->filter;
 		
-		// $data['cek'] = About::count();
-		// $data['about'] = About::where('keterangan','like','%'.$filter.'%')->paginate(10);
-        // return view('menu.about.v_about',$data);
-
-		$url = 'http://147.139.185.163:81/api/about';
-		$json_data = file_get_contents($url);
-
-		// Decode JSON data into PHP array
-		$about = json_decode($json_data);
-
-        return view('menu.about.v_about', compact('about'));
+		$data['cek'] = About::count();
+		$data['about'] = About::where('keterangan','like','%'.$filter.'%')->paginate(10);
+        return view('menu.about.v_about',$data);
     }
 		
 	public function tambah()
